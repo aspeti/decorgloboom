@@ -108,7 +108,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Actualizar</button>
+                  <button type="submit" class="btn btn-success">Actualizar</button>
                   <a type="button" class="btn btn-danger" href="<?php echo base_url();?>productos/">Cancelar</a>
                 </div>
               </form>

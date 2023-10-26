@@ -102,7 +102,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Guardar</button>
+                  <button type="submit" class="btn btn-success">Guardar</button>
                   <a type="button" class="btn btn-danger" href="<?php echo base_url();?>usuarios/">Cancelar</a>
                 </div>
               </form>

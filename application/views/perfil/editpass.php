@@ -70,7 +70,7 @@
                   <div class="card-footer">
                   <a type="button" id="butonHabilitar" class="btn btn-warning" onclick="habilitarCampos(['newpassword','confirmpassword'])">Editar</a>
 
-                  <button type="submit" id="btnActualizar"    class="btn btn-primary">Actualizar</button>
+                  <button type="submit" id="btnActualizar"    class="btn btn-success">Actualizar</button>
                   
                   <a type="button"   class="btn btn-danger" onclick="deshabilitarCampos([ 'newpassword','confirmpassword'])">Cancelar</a>
                 </div> <!--id="butonActualizar" style="display:none;" -->
