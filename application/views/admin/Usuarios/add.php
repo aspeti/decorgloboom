@@ -21,7 +21,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-6">
+          <div class="col-8">
 
             <div class="card">
               <!-- /.card-header -->
@@ -41,45 +41,49 @@
               </div>s
               <?php endif;?>
               <!-- /.Alertr -->
-         
-
               <!-- form start -->
               <form action="<?php echo base_url();?>usuarios/insert" method="POST">
                 <div class="card-body">
-                  <div class="form-group">
-                    <label for="nombre">Nombre *</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>" 
+                  <div class="form-group row">
+                    <div class="form-group col-md-6"> 
+                      <label for="nombre">Nombre *</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>" 
                             placeholder="nombre" name="nombre" id="nombre" value = "<?php echo set_value("nombre");?>">
                             <?php echo form_error("nombre","<span class='help-block'>","</span>")?>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellido">apellido</label>
+                        <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>"
+                              placeholder="Apellido" name="apellido" id="apellido" value = "<?php echo set_value("apellido");?>">
+                              <?php echo form_error("apellido","<span class='help-block'>","</span>")?>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="apellido">apellido</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>"
-                           placeholder="Apellido" name="apellido" id="apellido" value = "<?php echo set_value("apellido");?>">
-                           <?php echo form_error("apellido","<span class='help-block'>","</span>")?>
-                  </div>    
-                  <div class="form-group">
-                    <label for="ci">CI</label>
-                    <input type="text" class="form-control" placeholder="Cedula de Identidad" name="ci">
-                  </div> 
                   <div class="form-group">
                     <label for="direccion">Direccion *</label>
                     <input type="text" class="form-control <?php echo !empty(form_error("direccion")) ? 'is-invalid':' ';?>" 
                             placeholder="Direccion" name="direccion" id="direccion" value = "<?php echo set_value("direccion");?>">
                             <?php echo form_error("direccion","<span class='help-block'>","</span>")?>
-                  </div>       
-                  <div class="form-group">
-                    <label for="direccion">Celular *</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("celular")) ? 'is-invalid':' ';?>" 
-                          placeholder="Celular" name="celular" id="celular" value = "<?php echo set_value("celular");?>">
-                          <?php echo form_error("celular","<span class='help-block'>","</span>")?>
-                  </div>                   
-                  <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("email")) ? 'is-invalid':' ';?>"
-                        placeholder="Correo electronico" name="email" id="email" value = "<?php echo set_value("email");?>">
-                        <?php echo form_error("email","<span class='help-block'>","</span>")?>
-                  </div> 
+                  </div>
+                  <div class="form-group row">
+                    <div class="form-group col-md-4">
+                      <label for="ci">CI</label>
+                      <input type="text" class="form-control" placeholder="Cedula de Identidad" name="ci">
+                    </div>        
+                    <div class="form-group col-md-4">
+                      <label for="direccion">Celular *</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("celular")) ? 'is-invalid':' ';?>" 
+                            placeholder="Celular" name="celular" id="celular" value = "<?php echo set_value("celular");?>">
+                            <?php echo form_error("celular","<span class='help-block'>","</span>")?>
+                    </div>
+                  
+                    <div class="form-group col-md-4">
+                      <label for="email">Email *</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("email")) ? 'is-invalid':' ';?>"
+                          placeholder="Correo electronico" name="email" id="email" value = "<?php echo set_value("email");?>">
+                          <?php echo form_error("email","<span class='help-block'>","</span>")?>
+                    </div> 
+
+                  </div>
                   <!--div class="form-group">
                     <label for="password">Password *</label>
                     <input type="password" class="form-control <?php echo !empty(form_error("password")) ? 'is-invalid':' ';?>" 
@@ -102,9 +106,7 @@
                   <a type="button" class="btn btn-danger" href="<?php echo base_url();?>usuarios/">Cancelar</a>
                 </div>
               </form>
-            </div>              
-
-            
+            </div>                        
               </div>
               <!-- /.card-body -->
             </div>
