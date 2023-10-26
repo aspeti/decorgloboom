@@ -11,19 +11,19 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 
 -- -----------------------------------------------------
 -- -----------------------------------------------------
--- Schema tienda_db
+-- Schema decorgloboom_db
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema tienda_db
+-- Schema decorgloboom_db
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `tienda_db` DEFAULT CHARACTER SET utf8 ;
-USE `tienda_db` ;
+CREATE SCHEMA IF NOT EXISTS `decorgloboom_db` DEFAULT CHARACTER SET utf8 ;
+USE `decorgloboom_db` ;
 
 -- -----------------------------------------------------
--- Table `tienda_db`.`categoria`
+-- Table `decorgloboom_db`.`categoria`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `tienda_db`.`categoria` (
+CREATE TABLE IF NOT EXISTS `decorgloboom_db`.`categoria` (
   `id_categoria` INT(11) NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NOT NULL,
   `descripcion` VARCHAR(250) NULL DEFAULT NULL,
@@ -34,9 +34,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `tienda_db`.`recibo`
+-- Table `decorgloboom_db`.`recibo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `tienda_db`.`recibo` (
+CREATE TABLE IF NOT EXISTS `decorgloboom_db`.`recibo` (
   `id_recibo` INT(11) NOT NULL AUTO_INCREMENT,
   `fecha_creacion` DATETIME NULL DEFAULT NULL,
   `fecha_actualizacion` DATETIME NULL DEFAULT NULL,
@@ -51,9 +51,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `tienda_db`.`rol`
+-- Table `decorgloboom_db`.`rol`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `tienda_db`.`rol` (
+CREATE TABLE IF NOT EXISTS `decorgloboom_db`.`rol` (
   `id_rol` INT(11) NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL DEFAULT NULL,
   `descripcion` VARCHAR(45) NULL DEFAULT NULL,
@@ -64,9 +64,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `tienda_db`.`usuario`
+-- Table `decorgloboom_db`.`usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `tienda_db`.`usuario` (
+CREATE TABLE IF NOT EXISTS `decorgloboom_db`.`usuario` (
   `id_usuario` INT(11) NOT NULL AUTO_INCREMENT,
   `fecha_creacion` DATETIME NULL,
   `fecha_actualizacion` DATETIME NULL,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `tienda_db`.`usuario` (
   PRIMARY KEY (`id_usuario`),
   CONSTRAINT `fk_Usuario_rol1`
     FOREIGN KEY (`id_rol`)
-    REFERENCES `tienda_db`.`rol` (`id_rol`)
+    REFERENCES `decorgloboom_db`.`rol` (`id_rol`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -90,9 +90,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `tienda_db`.`reserva`
+-- Table `decorgloboom_db`.`reserva`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `tienda_db`.`reserva` (
+CREATE TABLE IF NOT EXISTS `decorgloboom_db`.`reserva` (
   `id_reserva` INT(11) NOT NULL AUTO_INCREMENT,
   `fecha_creacion` DATETIME NULL DEFAULT NULL,
   `fecha_actualizacion` DATETIME NULL DEFAULT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `tienda_db`.`reserva` (
   PRIMARY KEY (`id_reserva`),
   CONSTRAINT `fk_reserva_usuario1`
     FOREIGN KEY (`id_usuario`)
-    REFERENCES `tienda_db`.`usuario` (`id_usuario`)
+    REFERENCES `decorgloboom_db`.`usuario` (`id_usuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -114,9 +114,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `tienda_db`.`producto`
+-- Table `decorgloboom_db`.`producto`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `tienda_db`.`producto` (
+CREATE TABLE IF NOT EXISTS `decorgloboom_db`.`producto` (
   `id_producto` INT(11) NOT NULL AUTO_INCREMENT,
   `fecha_creacion` DATETIME NULL DEFAULT NULL,
   `fecha_actualizacion` DATETIME NULL DEFAULT NULL,
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `tienda_db`.`producto` (
   PRIMARY KEY (`id_producto`),
   CONSTRAINT `fk_Producto_categoria1`
     FOREIGN KEY (`id_categoria`)
-    REFERENCES `tienda_db`.`categoria` (`id_categoria`)
+    REFERENCES `decorgloboom_db`.`categoria` (`id_categoria`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -136,9 +136,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `tienda_db`.`detalle`
+-- Table `decorgloboom_db`.`detalle`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `tienda_db`.`detalle` (
+CREATE TABLE IF NOT EXISTS `decorgloboom_db`.`detalle` (
   `id_producto` INT(11) NOT NULL,
   `id_reserva` INT(11) NOT NULL,
   `cantidad` INT NULL,
@@ -151,17 +151,17 @@ CREATE TABLE IF NOT EXISTS `tienda_db`.`detalle` (
   PRIMARY KEY (`id_producto`, `id_reserva`, `id_recibo`),
   CONSTRAINT `fk_producto_has_reserva_producto1`
     FOREIGN KEY (`id_producto`)
-    REFERENCES `tienda_db`.`producto` (`id_producto`)
+    REFERENCES `decorgloboom_db`.`producto` (`id_producto`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_producto_has_reserva_reserva1`
     FOREIGN KEY (`id_reserva`)
-    REFERENCES `tienda_db`.`reserva` (`id_reserva`)
+    REFERENCES `decorgloboom_db`.`reserva` (`id_reserva`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_detalle_recibo1`
     FOREIGN KEY (`id_recibo`)
-    REFERENCES `tienda_db`.`recibo` (`id_recibo`)
+    REFERENCES `decorgloboom_db`.`recibo` (`id_recibo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
