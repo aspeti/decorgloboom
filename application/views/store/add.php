@@ -81,38 +81,8 @@
                                                         </span>
                                                     </div><!-- /input-group -->
                                                 </div> 
-                                                <!-- /Fecha 
-                                                <div class="col-md-3">
-                                                    <label for="">Fecha:</label>
-                                                    <input type="date" class="form-control" name="fecha" required>
-                                                </div>-->
-                                            </div>
-                                            <!--div class="form-group">
-                                                <div class="row">
-                                                <div class="col-md-6">
-                                                    <label for="">Producto:</label>
-                                                    <input type="text" class="form-control" id="producto">
-                                                </div>
-                                                
-                                                <div class="col-md-2">
-                                                    <label for="">&nbsp;</label>
-                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
-                                                </div>
-                                                </div>
-                                            </!div-->
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-md-6">
+                                                <div class="col-md-5">
                                                         <label for="producto">Productos</label>
-                                                        <!--select-- class="form-control select2bs4" style="width: 100%;">
-                                                            <option selected="selected">Seleccione un producto...</option>
-                                                            <option>Alaska</option>
-                                                            <option>California</option>
-                                                            <option>Delaware</option>
-                                                            <option>Tennessee</option>
-                                                            <option>Texas</option>
-                                                            <option>Washington</option>
-                                                        </!select-->
                                                         <select  class="form-control select2bs4" name="producto" id="producto" style="width: 100%;">
                                                         <option value="selected">Seleccione...</option> 
                                                             <?php foreach($productos as $producto): ?>
@@ -121,10 +91,16 @@
                                                             <option value="<?php echo $dataProducto;?>"><?php echo $producto->codigo."-".$producto->nombre."-".$producto->precio." Bs." ;?></option>  
                                                         <?php endforeach;?>
                                                     </select>  
-                                                    </div>
-                                                    <div class="col-md-2">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    
+                                                    <div class="col-md-11">
                                                     <label for="">&nbsp;</label>
-                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar</button>
+                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar Producto al recibo</button>
                                                 </div>
                                                 </div>
                                             </div>
@@ -168,7 +144,7 @@
                                                 </div-->
                                                 <div class="col-md-3">
                                                     <div class="input-group">
-                                                        <span class="input-group-addon">Total Bs:</span>
+                                                        <span class="input-group-addon">Importe Total Bs:</span>
                                                         <input type="text" class="form-control" placeholder="0.00" name="txttotal" id="txttotal"  readonly="readonly">
                                                     </div>
                                                 </div>
