@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Inicio</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -20,81 +20,39 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <!-- Info boxes -->
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
-              <div class="info-box-content">
-                <span class="info-box-text">Configuraciones</span>
-                <span class="info-box-number">
-                  10
-                  <small>%</small>
-                </span>
+      <!-- Default box -->
+      <div class="card card-solid">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <h3 class="d-inline-block d-sm-none">DECORGLOBOOM</h3>
+              <div class="col-12">
+                <img src="<?php echo base_url()."assets/img/imgGlobos.jpg" ;?>" class="product-image" alt="Product Image">
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+            
+            <div class="col-12 col-sm-6">
+              <h3 class="my-3" style="color: blue";>DECORGLOBOOM</h3>
+              <p>DECORGLOBOOM, desde su establecimiento en 2015, ha sido pionera en la industria de suministros para decoraciones, 
+                brindando una gama exquisita de productos y accesorios especialmente diseñados para transformar cualquier evento 
+                en una experiencia memorable y llena de alegría. Con una pasión inquebrantable por la creatividad y la calidad, 
+                nuestra empresa se ha ganado una reputación distinguida por su compromiso inquebrantable con la excelencia y la satisfacción del cliente.</p>
 
-              <div class="info-box-content">
-                <span class="info-box-text">Productos</span>
-                <span class="info-box-number">41,410</span>
-              </div>
-              <!-- /.info-box-content -->
+              <P>Ya sea para eventos corporativos, fiestas de cumpleaños, bodas o cualquier otra celebración especial, DECORGLOBOOM es el aliado perfecto para 
+                garantizar que cada momento se convierta en una experiencia única y encantadora. Descubra un mundo de posibilidades creativas y decorativas con DECORGLOBOOM: 
+                donde la elegancia y la diversión se encuentran en cada detalle.</P>
             </div>
-            <!-- /.info-box -->
+            
           </div>
-          <!-- /.col -->
 
-          <!-- fix for small devices only -->
-          <div class="clearfix hidden-md-up"></div>
-
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Ventas</span>
-                <span class="info-box-number">760</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Nuevos clientes</span>
-                <span class="info-box-number">2,000</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-
-        <div class="row">
           
-          <!-- /.col -->
+         
         </div>
-        <!-- /.row -->
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
 
-        <!-- Main row -->
-       
-        <!-- /.row -->
-      </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
   </div>
