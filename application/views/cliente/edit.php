@@ -21,14 +21,14 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-6">
+          <div class="col-8">
 
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">    
                 
               <div class="card card-primary">
-              <div class="card-header">
+              <div class="card-header bg-warning">
                 <h3 class="card-title">Cliente</h3>
               </div>              
               <!-- /.card-header -->
@@ -49,11 +49,20 @@
                   <div class="form-group">
                     <input type="hidden" name="idCliente" value="<?php echo $cliente->id_cliente; ?>">
                   </div>
-                  <div class="form-group">
-                    <label for="nombre">Nombre *</label>
-                    <input type="text" class="form-control  <?php echo !empty(form_error("nombre")) ? 'is-invalid':'';?>" placeholder="nombre" id="nombre" name="nombre" 
-                          value="<?php echo !empty(form_error("nombre")) ? set_value("nombre") : $cliente->nombre; ?>">
-                    <?php echo form_error("nombre","<span class='help-block'>","</span>")?>                 
+                  <div class="form-group row">  
+                    <div class="form-group col-md-6 ">
+                      <label for="nombre">Nombre *</label>
+                      <input type="text" class="form-control  <?php echo !empty(form_error("nombre")) ? 'is-invalid':'';?>" placeholder="nombre" id="nombre" name="nombre" 
+                            value="<?php echo !empty(form_error("nombre")) ? set_value("nombre") : $cliente->nombre; ?>">
+                      <?php echo form_error("nombre","<span class='help-block'>","</span>")?>                 
+                    </div>
+
+                    <div class="form-group col-md-6 ">
+                      <label for="telefono">Celular</label>
+                      <input type="text" class="form-control  <?php echo !empty(form_error("telefono")) ? 'is-invalid':'';?>" placeholder="Celular" id="telefono" name="telefono" 
+                            value="<?php echo !empty(form_error("telefono")) ? set_value("telefono") : $cliente->telefono; ?>">
+                      <?php echo form_error("telefono","<span class='help-block'>","</span>")?>                 
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="num_documento">Num Documento</label>
@@ -61,12 +70,7 @@
                           value="<?php echo !empty(form_error("num_documento")) ? set_value("num_documento") : $cliente->num_documento; ?>">
                     <?php echo form_error("num_documento","<span class='help-block'>","</span>")?>                 
                   </div>
-                  <div class="form-group">
-                    <label for="telefono">Celular</label>
-                    <input type="text" class="form-control  <?php echo !empty(form_error("telefono")) ? 'is-invalid':'';?>" placeholder="Celular" id="telefono" name="telefono" 
-                          value="<?php echo !empty(form_error("telefono")) ? set_value("telefono") : $cliente->telefono; ?>">
-                    <?php echo form_error("telefono","<span class='help-block'>","</span>")?>                 
-                  </div>
+
 
                   <div class="form-group">
                     <label for="direccion">Direccion</label>
@@ -78,7 +82,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Actualizar</button>
+                  <button type="submit" class="btn btn-success">Actualizar</button>
                   <a type="button" class="btn btn-danger" href="<?php echo base_url();?>clientes/">Cancelar</a>
                 </div>
               </form>

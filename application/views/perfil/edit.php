@@ -17,14 +17,14 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-8">
 
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">    
                 
               <div class="card card-primary">
-              <div class="card-header">
+              <div class="card-header bg-warning">
                 <h3 class="card-title">Perfil del Usuario</h3>
               </div>              
               <!-- /.card-header -->
@@ -45,49 +45,54 @@
                   <div class="form-group">
                     <input type="hidden" name="idusuario" value="<?php echo $perfil->id_usuario; ?>">
                   </div>
+                  <div class="form-group row">  
 
-                  <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':'';?>"
-                           placeholder="nombre" name="nombre" id="nombre" value="<?php echo !empty(form_error("nombre")) ? set_value("nombre") : $perfil->nombre; ?>" disabled>
-                           <?php echo form_error("nombre","<span class='help-block'>","</span>")?>  
-                  </div>
-                  <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("apellido")) ? 'is-invalid':'';?>"
-                           placeholder="Apellido" name="apellido" id="apellido" value="<?php echo !empty(form_error("apellido")) ? set_value("apellido") : $perfil->apellido; ?>" disabled>
-                           <?php echo form_error("apellido","<span class='help-block'>","</span>")?>  
-                  </div>       
-                  <div class="form-group">
-                    <label for="ci">CI</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("ci")) ? 'is-invalid':'';?>" 
-                           placeholder="CI" name="ci" id="ci" value="<?php echo !empty(form_error("apellido")) ? set_value("apellido") : $perfil->ci; ?>" disabled>
-                           <?php echo form_error("ci","<span class='help-block'>","</span>")?>  
-                          </div> 
-                  <div class="form-group">
-                    <label for="celular">Celular</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("celular")) ? 'is-invalid':'';?>" 
-                            placeholder="Celular" name="celular" id="celular" value="<?php echo !empty(form_error("celular")) ? set_value("celular") : $perfil->celular; ?>" disabled>
-                            <?php echo form_error("celular","<span class='help-block'>","</span>")?>  
-                  </div>
+                    <div class="form-group col-md-6">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':'';?>"
+                            placeholder="nombre" name="nombre" id="nombre" value="<?php echo !empty(form_error("nombre")) ? set_value("nombre") : $perfil->nombre; ?>" disabled>
+                            <?php echo form_error("nombre","<span class='help-block'>","</span>")?>  
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="apellido">Apellido</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("apellido")) ? 'is-invalid':'';?>"
+                            placeholder="Apellido" name="apellido" id="apellido" value="<?php echo !empty(form_error("apellido")) ? set_value("apellido") : $perfil->apellido; ?>" disabled>
+                            <?php echo form_error("apellido","<span class='help-block'>","</span>")?>  
+                    </div>
+                  </div>  
                   <div class="form-group">
                     <label for="direccion">Direccion</label>
                     <input type="text" class="form-control <?php echo !empty(form_error("direccion")) ? 'is-invalid':'';?>" 
                             placeholder="Direccion" name="direccion" id="direccion" value="<?php echo !empty(form_error("direccion")) ? set_value("direccion") : $perfil->direccion; ?>" disabled>
                             <?php echo form_error("direccion","<span class='help-block'>","</span>")?>  
-                  </div>     
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("email")) ? 'is-invalid':'';?>" 
-                            placeholder="Correo electronico" name="email" id="email" value="<?php echo !empty(form_error("email")) ? set_value("email") : $perfil->email; ?>"disabled>
-                            <?php echo form_error("email","<span class='help-block'>","</span>")?>  
+                  </div>
+                  <div class="form-group row">     
+                    <div class="form-group col-md-4">
+                      <label for="ci">CI</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("ci")) ? 'is-invalid':'';?>" 
+                            placeholder="CI" name="ci" id="ci" value="<?php echo !empty(form_error("apellido")) ? set_value("apellido") : $perfil->ci; ?>" disabled>
+                            <?php echo form_error("ci","<span class='help-block'>","</span>")?>  
+                            </div> 
+                    <div class="form-group col-md-4">
+                      <label for="celular">Celular</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("celular")) ? 'is-invalid':'';?>" 
+                              placeholder="Celular" name="celular" id="celular" value="<?php echo !empty(form_error("celular")) ? set_value("celular") : $perfil->celular; ?>" disabled>
+                              <?php echo form_error("celular","<span class='help-block'>","</span>")?>  
+                    </div>
+      
+                    <div class="form-group col-md-4">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("email")) ? 'is-invalid':'';?>" 
+                              placeholder="Correo electronico" name="email" id="email" value="<?php echo !empty(form_error("email")) ? set_value("email") : $perfil->email; ?>"disabled>
+                              <?php echo form_error("email","<span class='help-block'>","</span>")?>  
+                    </div>
                   </div>                       
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <a type="button" id="butonHabilitar" class="btn btn-warning" onclick="habilitarCampos(['nombre', 'apellido','ci','celular','direccion','email'])">Editar</a>
 
-                  <button type="submit"  class="btn btn-primary">Actualizar</button>
+                  <button type="submit"  class="btn btn-success">Actualizar</button>
                   
                   <a type="button"   class="btn btn-danger" onclick="deshabilitarCampos(['nombre', 'apellido','ci','celular','direccion','email'])">Cancelar</a>
                 </div> <!--id="butonActualizar" style="display:none;" -->

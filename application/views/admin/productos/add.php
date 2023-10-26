@@ -21,14 +21,14 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-6">
+          <div class="col-8">
 
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">    
                 
               <div class="card card-primary">
-              <div class="card-header">
+              <div class="card-header bg-warning">
                 <h3 class="card-title">Productos</h3>
               </div>              
               <!-- /.card-header -->
@@ -46,34 +46,54 @@
               <!-- form start -->
               <form action="<?php echo base_url();?>productos/insert" method="POST" enctype="multipart/form-data">
                 <div class="card-body">
-                  <div class="form-group">
-                    <label for="codigo">Codigo *</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("codigo")) ? 'is-invalid':' ';?>" placeholder="codigo" id="codigo" name="codigo" 
-                          value="<?php echo set_value("codigo");?>">
-                    <?php echo form_error("codigo","<span class='help-block'>","</span>")?>
-                  </div>
-                  <div class="form-group">
-                    <label for="nombre">Nombre *</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>" placeholder="nombre" id="nombre" name="nombre" 
+
+                  <div class="form-group row">
+
+                  
+                    <div class="form-group col-md-6">
+                      <label for="codigo">Codigo *</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("codigo")) ? 'is-invalid':' ';?>" placeholder="codigo" id="codigo" name="codigo" 
+                            value="<?php echo set_value("codigo");?>">
+                      <?php echo form_error("codigo","<span class='help-block'>","</span>")?>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="nombre">Nombre *</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>" placeholder="nombre" id="nombre" name="nombre" 
                           value="<?php echo set_value("nombre");?>">
-                    <?php echo form_error("nombre","<span class='help-block'>","</span>")?>
+                      <?php echo form_error("nombre","<span class='help-block'>","</span>")?>
+                    </div>
+
                   </div>
                   <div class="form-group">
                     <label for="descripcion">Descripcion</label>
                     <input type="text" class="form-control" placeholder="Descripcion" name="descripcion">
-                  </div>    
-                  <div class="form-group">
-                    <label for="precio">Precio *</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("precio")) ? 'is-invalid':' ';?>" placeholder="Precio" id="precio" name="precio"
-                          value="<?php echo set_value("precio");?>">
-                          <?php echo form_error("precio","<span class='help-block'>","</span>")?> 
-                  </div>  
-                  <div class="form-group">
-                    <label for="stock">Stock *</label>
-                    <input type="text" class="form-control <?php echo !empty(form_error("stock")) ? 'is-invalid':' ';?>" placeholder="Agregue cantidad en stock" id="stock" name="stock"
-                          value="<?php echo set_value("stock");?>">
-                          <?php echo form_error("stock","<span class='help-block'>","</span>")?> 
-                  </div>  
+                  </div>
+                  <div class="form-group row">    
+                    <div class="form-group col-md-4">
+                      <label for="precio">Precio *</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("precio")) ? 'is-invalid':' ';?>" placeholder="Precio" id="precio" name="precio"
+                            value="<?php echo set_value("precio");?>">
+                            <?php echo form_error("precio","<span class='help-block'>","</span>")?> 
+                    </div>  
+                    <div class="form-group col-md-4">
+                      <label for="stock">Stock *</label>
+                      <input type="text" class="form-control <?php echo !empty(form_error("stock")) ? 'is-invalid':' ';?>" placeholder="Agregue cantidad en stock" id="stock" name="stock"
+                            value="<?php echo set_value("stock");?>">
+                            <?php echo form_error("stock","<span class='help-block'>","</span>")?> 
+                    </div>
+                    
+                    <div class="form-group col-md-4">
+                      <label for="idCategoria">Categoria</label>
+                      <select type="text" class="form-control" placeholder="categoria" name="idCategoria">
+                        <?php foreach($categorias as $categoria):?>
+                          <option value="<?php echo $categoria->id_categoria?>">
+                              <?php echo $categoria->nombre;?>
+                        </option>
+
+                        <?php endforeach?>
+                      </select>  
+                    </div>
+                  </div> 
                   <div class="form-group">
                     <label for="customFile">Subir Imagen</label>
                     <div class="input-group">
@@ -83,22 +103,13 @@
                       </div>                     
                     </div>
                   </div>
+                  
 
-                  <div class="form-group">
-                    <label for="idCategoria">Categoria</label>
-                    <select type="text" class="form-control" placeholder="categoria" name="idCategoria">
-                      <?php foreach($categorias as $categoria):?>
-                        <option value="<?php echo $categoria->id_categoria?>">
-                            <?php echo $categoria->nombre;?>
-                      </option>
 
-                      <?php endforeach?>
-                    </select>  
-                  </div>            
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Guardar</button>                  
+                  <button type="submit" class="btn btn-success">Guardar</button>                  
                   <a type="button" class="btn btn-danger" href="<?php echo base_url();?>productos/">Cancelar</a>
                 </div>               
               </form>

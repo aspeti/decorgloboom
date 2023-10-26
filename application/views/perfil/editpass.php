@@ -17,14 +17,14 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
+          <div class="col-8">
 
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">    
                 
               <div class="card card-primary">
-              <div class="card-header">
+              <div class="card-header bg-warning">
                 <h3 class="card-title">Password del Usuario</h3>
               </div>              
               <!-- /.card-header -->
@@ -70,7 +70,7 @@
                   <div class="card-footer">
                   <a type="button" id="butonHabilitar" class="btn btn-warning" onclick="habilitarCampos(['newpassword','confirmpassword'])">Editar</a>
 
-                  <button type="submit" id="btnActualizar"    class="btn btn-primary">Actualizar</button>
+                  <button type="submit" id="btnActualizar"    class="btn btn-success">Actualizar</button>
                   
                   <a type="button"   class="btn btn-danger" onclick="deshabilitarCampos([ 'newpassword','confirmpassword'])">Cancelar</a>
                 </div> <!--id="butonActualizar" style="display:none;" -->

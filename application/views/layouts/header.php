@@ -36,11 +36,11 @@
 
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-purple">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      <li class="nav-item ">
+        <a class="nav-link navbar-purple" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li> 
     </ul>
 
@@ -50,14 +50,14 @@
        <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fa fa-user"></i>
+          <i class="fa fa-user navbar-purple"></i>
           <!--span class="badge badge-warning navbar-badge">15</!--span-->
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-item dropdown-header">Mi Perfil</span>
           <div class="dropdown-divider"></div>
           <a href="<?php echo base_url()?>usuarios/viewprofile/<?php echo $this->session->userdata('id_usuario'); ?> " class="dropdown-item">
-            <i class="fa fa-gear mr-2"></i>Mis datos
+            <i class="fa fa fa-user mr-2"></i>Mis datos
             <!--span class="float-right text-muted text-sm">3 mins</!span-->
           </a>
           <div class="dropdown-divider"></div>

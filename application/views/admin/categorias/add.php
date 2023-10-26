@@ -28,9 +28,10 @@
               <div class="card-body">    
                 
               <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Caterogia</h3>
-              </div>              
+              <div class="card-header bg-warning">
+                <h3 class="card-title">Categoría</h3>
+              </div>
+            
               <!-- /.card-header -->
 
               <!-- /.Alertr -->
@@ -58,7 +59,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Guardar</button>
+                  <button type="submit" class="btn btn-success">Guardar</button>
                   <a type="button" class="btn btn-danger" href="<?php echo base_url();?>categorias/">Cancelar</a>
                 </div>
               </form>
