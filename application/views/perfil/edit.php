@@ -24,7 +24,7 @@
               <div class="card-body">    
                 
               <div class="card card-primary">
-              <div class="card-header">
+              <div class="card-header bg-warning">
                 <h3 class="card-title">Perfil del Usuario</h3>
               </div>              
               <!-- /.card-header -->

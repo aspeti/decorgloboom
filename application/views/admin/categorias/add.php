@@ -28,9 +28,10 @@
               <div class="card-body">    
                 
               <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Caterogia</h3>
-              </div>              
+              <div class="card-header bg-warning">
+                <h3 class="card-title">Categoría</h3>
+              </div>
+            
               <!-- /.card-header -->
 
               <!-- /.Alertr -->
