@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="<?php echo base_url();?>assets/img/logo.png" class="brand-image elevation-0" style="opacity: .8">
-      <span class="brand-text font-weight-light"><strong>Multitud Deportiva</strong></span>
+      <span class="brand-text font-weight-light"><strong>DECORGLOBOOM</strong></span>
     </a>
 
     <!-- Sidebar -->
