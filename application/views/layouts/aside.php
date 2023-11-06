@@ -67,7 +67,19 @@
                       <i class="fa fa-credit-card-alt nav-icon"></i>
                       <p>Ventas</p>
                       </a>
-                  </li>   
+                  </li>
+                  <li class="nav-item">
+                      <a href="<?php echo base_url();?>reportes" class="nav-link">
+                      <i class="fas fa-file-text nav-icon"></i>
+                      <p>Reportes</p>
+                      </a>
+                  </li> 
+                  <li class="nav-item">
+                    <a href="<?php echo base_url();?>reportes/estadistica" class="nav-link">
+                      <i class="fa fa-sort-amount-desc nav-icon"></i>
+                      <p>Mas Vendidos</p>
+                    </a>
+                  </li>    
           <?php }?>     
                     
         </ul>

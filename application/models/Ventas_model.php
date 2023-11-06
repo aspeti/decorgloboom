@@ -41,4 +41,5 @@ class Ventas_model extends CI_Model {
     public function save_detalle($data){
         $this->db->insert('detalle',$data);
     }
+
 }
