@@ -52,8 +52,8 @@ class Reportes extends CI_Controller {
 			$data = array(
 				"ventas" => $this->Reporte_model->getAllVentas(),
 				'usuario' => $this->session->userdata("nombre"),	
-				"fechaInicio"=>"---------", 
-				"fechaFinal"=>"----------",
+				"fechaInicio"=>"+++++++++++++", 
+				"fechaFinal"=>"++++++++++++++",
 								
 			);	
 			$this->load->view('reportes/fpdf/ventas',  $data);

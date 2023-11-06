@@ -11,23 +11,32 @@ class PDF extends FPDF
    // Cabecera de página
    function Header()
    {
-      $this->Image('application/views/reportes/fpdf/logoMD.png', 20, 10, 20);
+      $this->Image('application/views/reportes/fpdf/logo.png', 20, 3, 20);
+      $this->Image('application/views/reportes/fpdf/logo.png', 175, 3, 20);
 
-      $this->Cell(40);  // mover a la derecha
+      
+      $this->Cell(60);  // mover a la derecha
       $this->SetFont('Arial', 'B', 10);
-      $this->Cell(85, 10, utf8_decode("TIENDA DEPORTIVAS NACIONAES S.A"), 0, 0, '', 0);
-      $this->Cell(10);
-      $this->Cell(85, 10, utf8_decode("NIT: 1230809123"), 0, 0, '', 0); 
+      $this->Cell(80, 10, utf8_decode("TIENDA DE COTILLONES NACIONALES S.A"), 0, 0, '', 0);
       $this->Ln(5);
 
-      $this->Cell(40);  // mover a la derecha
+      $this->Cell(80);  // mover a la derecha
       $this->SetFont('Arial', 'B', 10);
-      $this->Cell(85, 10, utf8_decode("MULLTITUD DEPORTIVA"), 0, 0, '', 0);
-      $this->Cell(10); 
-      $this->Cell(85, 10, utf8_decode("NOTA DE VENTA"), 0, 0, '', 0);
-      $this->Ln(45);
+      $this->Cell(85, 10, utf8_decode("DECORGLOBOOM"), 0, 0, '', 0);
+      $this->Ln(15);
 
-      $this->SetFillColor(53, 96, 69); //colorFondo
+      
+
+      $this->Cell(135);  // mover a la derecha
+      $this->SetFont('Arial', 'B', 10);
+      $this->Cell(85,0, utf8_decode("NIT:098789-233"), 0, 1, '', 0);
+
+      $this->Cell(135);  // mover a la derecha
+      $this->SetFont('Arial', 'B', 10);
+      $this->Cell(85, 10, utf8_decode("NOTA DE VENTA"), 0, 0, '', 0);
+      $this->Ln(30);
+
+      $this->SetFillColor(141, 13, 229); //colorFondo
       $this->SetTextColor(255, 255, 255); //colorTexto
       $this->SetDrawColor(163, 163, 163); //colorBorde
       $this->SetFont('Arial', 'B', 11);
@@ -60,34 +69,35 @@ class PDF extends FPDF
 $pdf = new PDF();
 $pdf->AddPage();
 
-$pdf->SetY(20);
+$pdf->SetY(30);
 
-      $pdf->Cell(135);  // mover a la derecha
-      $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(8, 10, utf8_decode("No.: ".$venta->num_documento), 0, 0, '', 0);
-      $pdf->Ln(10);
+
+
 
       $pdf->Cell(10);  // mover a la derecha
       $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(85, 10, utf8_decode("Direccion: Avenida San Martin Esquina Heroinas"), 0, 0, '', 0);
+      $pdf->Cell(125 , 10, utf8_decode("Sr.(a): ".$venta->cliente), 0, 0, '', 0);
       $pdf->Ln(5);
 
       $pdf->Cell(10);  // mover a la derecha
       $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(85, 10, utf8_decode("Sucursal:  Cochabamba"), 0, 0, '', 0);
-      $pdf->Ln(10);
+      $pdf->Cell(125, 10, utf8_decode("NIT, CI.: ".$venta->ci), 0, 0, '', 0);
+      $pdf->Cell(5, 10, utf8_decode("No.: ".$venta->num_documento), 0, 0, '', 0);
+      $pdf->Ln(5);
 
-      $pdf->Cell(10);  // mover a la derecha
-      $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(85, 10, utf8_decode("Sr.(a): ".$venta->cliente), 0, 0, '', 0);
-      $pdf->Cell(15, 10, utf8_decode("Fecha: ".$venta->fecha_creacion), 0, 0, '', 0);
+      $pdf->Cell(10); 
+      $pdf->Cell(125, 10, utf8_decode("Fecha: ".$venta->fecha_creacion), 0, 0, '', 0);
+      
       $pdf->Ln(5);
 
       
-      $pdf->Cell(10);  // mover a la derecha
-      $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(15, 10, utf8_decode("NIT, CI.: ".$venta->ci), 0, 0, '', 0);
-      $pdf->Ln(20);
+      
+
+
+      $pdf->Cell(80);  // mover a la derecha
+      $pdf->SetFont('Arial', 'B', 20);
+      $pdf->Cell(80, 10, utf8_decode(""), 0, 0, '', 0);
+      $pdf->Ln(25);
       
       
       $i = 0;
@@ -122,12 +132,29 @@ $pdf->SetY(20);
 
       $pdf->Cell(10);  // mover a la derecha
       $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(15, 10, utf8_decode("Recibo Original: MULTITUD DEPORTIVA" ), 0, 0, '', 0);
+      $pdf->Cell(125, 10, utf8_decode("Recibo Original: DECORGLOBOOM" ), 0, 0, '', 0);
+      $pdf->Ln(5);
+
+      $pdf->Cell(10);  // mover a la derecha
+      $pdf->SetFont('Arial', 'B', 10);
+      $pdf->Cell(15, 10, utf8_decode("No. Autorizacion 345-543LM" ), 0, 0, '', 0);
+      $pdf->Ln(5);
+
+      
+      
+      $pdf->Cell(10);  // mover a la derecha
+      $pdf->SetFont('Arial', 'B', 10);
+      $pdf->Cell(125, 10, utf8_decode("Direccion: Av. Pando Hupermoll 3er piso"), 0, 0, '', 0);
       $pdf->Ln(5);
       $pdf->Cell(10);  // mover a la derecha
       $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(15, 10, utf8_decode("NIT: 1230809123 / No. Autorizacion 3423" ), 0, 0, '', 0);
-      $pdf->Ln(20);
+      $pdf->Cell(85, 10, utf8_decode("Sucursal:  Cochabamba"), 0, 0, '', 0);
+      $pdf->Ln(5);
+
+      $pdf->Cell(10);  // mover a la derecha
+      $pdf->SetFont('Arial', 'B', 10);
+      
+      $pdf->Ln(10);
 
 
 

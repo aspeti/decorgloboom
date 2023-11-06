@@ -11,26 +11,32 @@ class PDF extends FPDF
    // Cabecera de página
    function Header()
    {
-      $this->Image('application/views/reportes/fpdf/logoMD.png', 20, 10, 20);
+      $this->Image('application/views/reportes/fpdf/logo.png', 20, 3, 20);
+      $this->Image('application/views/reportes/fpdf/logo.png', 175, 3, 20);
 
-      $this->Cell(40);  // mover a la derecha
+      
+      $this->Cell(60);  // mover a la derecha
       $this->SetFont('Arial', 'B', 10);
-      $this->Cell(85, 10, utf8_decode("TIENDA DEPORTIVAS NACIONAES S.A"), 0, 0, '', 0);
-      $this->Cell(10);
-      $this->Cell(85, 10, utf8_decode("NIT: 1230809123"), 0, 0, '', 0); 
+      $this->Cell(80, 10, utf8_decode("TIENDA DE COTILLONES NACIONALES S.A"), 0, 0, '', 0);
       $this->Ln(5);
 
-      $this->Cell(40);  // mover a la derecha
+      $this->Cell(80);  // mover a la derecha
       $this->SetFont('Arial', 'B', 10);
-      $this->Cell(85, 10, utf8_decode("MULLTITUD DEPORTIVA"), 0, 0, '', 0);
+      $this->Cell(85, 10, utf8_decode("DECORGLOBOOM"), 0, 0, '', 0);
       $this->Ln(15);
 
-      $this->Cell(10);
+      $this->Cell(120);
+      $this->Cell(85, 20, utf8_decode("NIT: 1230809123"), 0, 0, '', 0); 
+      $this->Ln(5);
+
+
+      $this->Cell(60);
+      $this->SetFont('Arial', 'B', 15);
       $this->Cell(40, 50, utf8_decode("Productos mas vendidos"), 0, 0, '', 0); 
       $this->Ln(35);
 
 
-      $this->SetFillColor(53, 96, 69); //colorFondo
+      $this->SetFillColor(141, 13, 229); //colorFondo
       $this->SetTextColor(255, 255, 255); //colorTexto
       $this->SetDrawColor(163, 163, 163); //colorBorde
       $this->SetFont('Arial', 'B', 11);
@@ -86,14 +92,12 @@ $pdf->SetY(20);
       $pdf->SetFont('Arial', 'B', 10);
       $pdf->Cell(85, 10, utf8_decode("Sr.(a): "), 0, 0, '', 0);*/
       $hoy = date('d/m/Y');
-      $pdf->setY(25);
+      $pdf->setY(35);
       $pdf->Cell(10);
-      $pdf->Cell(50, 10, utf8_decode("Direccion: Avenida San Martin Esquina Heroinas"), 0, 0, '', 0);
+      $pdf->Cell(50, 10, utf8_decode("Direccion: Av. Pando Hupermoll 3er piso"), 0, 0, '', 0);
       $pdf->Ln(5);
       $pdf->Cell(10);
-      $pdf->Cell(50, 10, utf8_decode("Sucursal:Cochabamba/Bolivia"), 0, 0, '', 0);
-      $pdf->Ln(5);
-      $pdf->Cell(10);
+      $pdf->Cell(110, 10, utf8_decode("Sucursal:Cochabamba/Bolivia"), 0, 0, '', 0);
       $pdf->Cell(35, 10, utf8_decode("Fecha: ".$hoy), 0, 0, '', 0);
       $pdf->Ln(5);
       
@@ -135,11 +139,11 @@ $pdf->SetY(20);
 
       $pdf->Cell(10);  // mover a la derecha
       $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(15, 10, utf8_decode("Recibo Original: MULTITUD DEPORTIVA" ), 0, 0, '', 0);
+      $pdf->Cell(15, 10, utf8_decode("Reporte Original: DECORGLOBOO" ), 0, 0, '', 0);
       $pdf->Ln(5);
       $pdf->Cell(10);  // mover a la derecha
       $pdf->SetFont('Arial', 'B', 10);
-      $pdf->Cell(15, 10, utf8_decode("NIT: 1230809123 / No. Autorizacion 3423" ), 0, 0, '', 0);
+      $pdf->Cell(15, 10, utf8_decode("NIT: 1230809123 / No. Autorizacion 345-543LM" ), 0, 0, '', 0);
       $pdf->Ln(20);
 
 $pdf->Output('Estadistica.pdf', 'I');//nombreDescarga, Visor(I->visualizar - D->descargar)

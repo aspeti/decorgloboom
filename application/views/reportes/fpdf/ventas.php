@@ -13,22 +13,26 @@ class PDF extends FPDF
       //$consulta_info = $conexion->query(" select *from hotel ");//traemos datos de la empresa desde BD
       //$dato_info = $consulta_info->fetch_object();
       //$this->Image('application/views/reportes/fpdf/logo.png', 270, 5, 20);
-      $this->Image('application/views/reportes/fpdf/logoMD.png', 10, 22, 40); //logo de la empresa,moverDerecha,moverAbajo,tamañoIMG
-      $this->SetFont('Arial', 'B', 19); //tipo fuente, negrita(B-I-U-BIU), tamañoTexto
-      $this->Cell(45); // Movernos a la derecha
-      $this->SetTextColor(0, 0, 0); //color
-      //creamos una celda o fila
-      $this->Cell(170, 15, utf8_decode('REPORTE GENERAL DE VENTAS'), 0, 1, 'C', 0); // AnchoCelda,AltoCelda,titulo,borde(1-0),saltoLinea(1-0),posicion(L-C-R),ColorFondo(1-0)
-      $this->Ln(3); // Salto de línea
-      $this->SetTextColor(103); //color
+      $this->Image('application/views/reportes/fpdf/logo.png', 60, 10, 10);
+      $this->Image('application/views/reportes/fpdf/logo.png', 210, 10  , 10);
 
+      
+      $this->Cell(70);  // mover a la derecha
+      $this->SetFont('Arial', 'B', 15);
+      $this->Cell(80, 10, utf8_decode("TIENDA DE COTILLONES NACIONALES S.A"), 0, 0, '', 0);
+      $this->Ln(5);
+
+      $this->Cell(100);  // mover a la derecha
+      $this->SetFont('Arial', 'B', 15);
+      $this->Cell(85, 10, utf8_decode("DECORGLOBOOM"), 0, 0, '', 0);
+      $this->Ln(13);
       /* UBICACION */
      
 
       /* TELEFONO */
-      $this->Cell(45);  // mover a la derecha
+      $this->Cell(10);  // mover a la derecha
       $this->SetFont('Arial', 'B', 10);
-      $this->Cell(85, 10, utf8_decode("Sucursal : Cochabamba"), 0, 0, '', 0);
+      $this->Cell(85, 10, utf8_decode("Direccion: Avenida San Martin Esquina Heroinas"), 0, 0, '', 0);
       $this->Ln(30);
 
       /* TITULO DE LA TABLA */
@@ -44,7 +48,7 @@ class PDF extends FPDF
       /* CAMPOS DE LA TABLA */
       //color
       //$this->SetFillColor(228, 100, 0); //colorFondo
-      $this->SetFillColor(53, 96, 69); //colorFondo
+      $this->SetFillColor(141, 13, 229); //colorFondo
       $this->SetTextColor(255, 255, 255); //colorTexto
       $this->SetDrawColor(163, 163, 163); //colorBorde
       $this->SetFont('Arial', 'B', 11);
@@ -89,7 +93,7 @@ $pdf->AliasNbPages(); //muestra la pagina / y total de paginas
 
 
 $pdf->SetY(33);
-$pdf->Cell(45);  // mover a la derecha
+$pdf->Cell(10);  // mover a la derecha
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(96, 10, utf8_decode("Usuario : " .$usuario), 0, 0, '', 0);
 $pdf->Ln(5);
@@ -98,7 +102,7 @@ $hoy = date('d/m/Y');
 $this->Cell(355, 10, utf8_decode($hoy), 0, 0, 'C'); // pie de pagina(fecha de pagina)*/
 
 /* TELEFONO */
-$pdf->Cell(45);  // mover a la derecha
+$pdf->Cell(10);  // mover a la derecha
 $pdf->SetFont('Arial', 'B', 10);
 $hoy = date('d/m/Y');
 $pdf->Cell(59, 10, utf8_decode("Fecha Inicial : ".$fechaInicio), 0, 0, '', 0);
@@ -106,7 +110,7 @@ $pdf->Ln(5);
 
 
 /* COREEO */
-$pdf->Cell(45);  // mover a la derecha
+$pdf->Cell(10);  // mover a la derecha
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(85, 10, utf8_decode("Fecha Final : ".$fechaFinal), 0, 0, '', 0);
 $pdf->Ln(25);
