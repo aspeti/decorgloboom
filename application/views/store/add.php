@@ -71,7 +71,7 @@
                                                 
                                             </div>
                                             <div class="form-group row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
                                                     <label for="">Cliente:</label>
                                                     <div class="input-group">
                                                         <input type="hidden" name="idcliente" id="idcliente">
@@ -81,7 +81,7 @@
                                                         </span>
                                                     </div><!-- /input-group -->
                                                 </div> 
-                                                <div class="col-md-5">
+                                                <div class="col-md-4">
                                                         <label for="producto">Productos</label>
                                                         <select  class="form-control select2bs4" name="producto" id="producto" style="width: 100%;">
                                                         <option value="selected">Seleccione...</option> 
@@ -92,18 +92,18 @@
                                                         <?php endforeach;?>
                                                     </select>  
                                                 </div>
-
-                                            </div>
-
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    
-                                                    <div class="col-md-11">
+                                                
+                                                <div class="form-group">
+                                                
+                                                    <div class="col-md-12">
                                                     <label for="">&nbsp;</label>
-                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar Producto al recibo</button>
+                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar Producto</button>
+                                                    </div>
                                                 </div>
-                                                </div>
+
                                             </div>
+
+                                            
                                                           
                                             <table id="tbventas" class="table table-bordered table-striped table-hover">
                                                 <thead>
@@ -290,13 +290,14 @@
     html+='<td><input type="hidden" name="precios[]" value="'+precio+'"/>'+precio+'</td>';
     html+='<td><input type="hidden" name="stock[]" value="'+stock+'"/>'+stock+'</td>';
     html+='<td><input id="cantidad_'+id+'" name="cantidad[]" type="number" value="1" min="1" max="'+stock+'" onkeyup="setCantidad('+id+','+precio+')" onchange="setCantidad('+id+','+precio+')"/></td>';
-    html+='<td><input  type="text" id="txt_subtotal_'+id+'" class="txt_subtotal disable" value="'+precio+'" readonly/></td>';
+    html+='<td><input  type="text" id="txt_subtotal_'+id+'"  name="importe[]" class="txt_subtotal disable" value="'+precio+'" readonly/></td>';
     html+='<td><button class="btn btn-danger" type="button" onclick="eliminarDetalle('+id+')"><i class="fa fa-trash"></i> </button></td>';
     html+='</tr>';
     arr_ids.push(id);
 
     return html;
-  }
+  }poij
+  
 
   function eliminarDetalle(id){
       if(confirm('Está seguro que desea eliminar este detalle?')){

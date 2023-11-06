@@ -61,6 +61,7 @@
                                         <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $viewURL ='productos/view/'.$venta->id_venta;?>">
                                           <span class="fa fa-search"></span>
                                         </button>   
+                                        <a class="btn btn-warning" href="<?php echo base_url();?>reportes/comprobante/<?php echo $venta->id_venta;?>" class="btn btn-info" target="_blank"><span class="fas fa-file-text" ></span></a>   
                                       </div>
                                   </td>  
                                 </tr>  
