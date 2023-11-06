@@ -42,30 +42,7 @@
             </div>
             <!-- /.info-box -->
           </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-primary elevation-1">
-                <i class="fas fa-shopping-cart"></i>
-              </span>
-              <div class="info-box-content">
-                <span class="info-box-text">CANTIDAD VENTAS HOY</span>
-                <span class="info-box-number">760</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
-              <div class="info-box-content">
-                <span class="info-box-text">Mayores ventas</span>
-                <span class="info-box-number">% <small>ventas</small></span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
+
         </div>  
 
         <div class="row">
@@ -126,11 +103,11 @@
                     <td><?php echo $venta->fecha_creacion;?></td>
                     <td><?php echo $venta->total;?></td>                                
                     <td>
-                        <div class="btn-group">
+                       <!-- <div class="btn-group">
                           <button type="button" class="btn btn-info btn-view-venta" data-toggle="modal" data-target="#modal-default" value="<?php echo $viewURL ='view/reporte'.$venta->id_venta;?>">
                             <span class="fa fa-search"></span>
                           </button>                        
-                        </div>
+                        </div>-->
                     </td>  
                   </tr>
                       <?php $cont++;?>                 
