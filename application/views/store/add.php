@@ -49,24 +49,21 @@
                                         <form action="<?php echo base_url();?>ventas/agregarventa" method="POST" class="form-horizontal" onsubmit=" return validarForm();">
                                             <div class="form-group row">                                                  
                                                 <div class="col-md-3">
-                                                    <label for="comprobante">Comprobante:</label>                                                    
-                                                    <select name="comprobante" id="comprobante" class="form-control" required>
-                                                        <option value="">Seleccione...</option> 
-                                                        <?php foreach($comprobantes as $comprobante): ?>
-                                                            <?php $dataComprobante = $comprobante->id_comprobante.'*'.$comprobante->cantidad.'*'.$comprobante->igv.'*'.$comprobante->serie;?>
-                                                            <option value="<?php echo $dataComprobante;?>"><?php echo $comprobante->nombre ;?></option>  
-                                                        <?php endforeach;?>
-                                                    </select>                                                  
+
+
+
+                                                    <?php $dataComprobante = $comprobante->id_comprobante.'*'.$comprobante->cantidad.'*'.$comprobante->igv.'*'.$comprobante->serie;?>
+                                                    <input type="hidden" id="comprobante" name="comprobante" value="<?php echo $dataComprobante;?>">                                                  
                                                     <input type="hidden" id="idcomprobante" name="idcomprobante">
                                                     <input type="hidden" id="igv">
                                                 </div>                                                
                                                 <div class="col-md-3">
-                                                    <label for="">Serie:</label>
-                                                    <input type="text" class="form-control" name="serie" id="serie" readonly>
+                                                   
+                                                    <input type="hidden" class="form-control" name="serie" id="serie" readonly>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <label for="">Numero:</label>
-                                                    <input type="text" class="form-control" name="numero"  id="numero" readonly>
+                                                   
+                                                    <input type="hidden" class="form-control" name="numero"  id="numero" readonly>
                                                 </div>
                                                 
                                             </div>
@@ -97,7 +94,7 @@
                                                 
                                                     <div class="col-md-12">
                                                     <label for="">&nbsp;</label>
-                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-flat btn-block"><span class="fa fa-plus"></span> Agregar Producto</button>
+                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-block"><span class="fa fa-plus"></span> Agregar Producto</button>
                                                     </div>
                                                 </div>
 
@@ -152,7 +149,7 @@
                                             
                                             <div class="form-group">
                                                 <div class="col-md-12">
-                                                    <button type="submit" class="btn btn-success btn-flat">Guardar</button>
+                                                    <button type="submit" class="btn btn-success">Guardar</button>
                                                 </div>                                                
                                             </div>
                                         </form>
