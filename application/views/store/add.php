@@ -203,6 +203,34 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div >
+                                    <form action="<?php echo base_url();?>clientes/insert" method="POST">
+                                    <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="form-group  col-md-6 ">
+                                            <label for="nombre">Nombre *</label>
+                                            <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>" placeholder="nombre" id="nombre" name="nombre" value = "<?php echo set_value("nombre");?>">
+                                            <?php echo form_error("nombre","<span class='help-block'>","</span>")?>
+                                        </div>
+
+
+                                        <div class="form-group col-md-6">
+                                            <label for="num_documento">Numero Documento</label>
+                                            <input type="text" class="form-control <?php echo !empty(form_error("num_documento")) ? 'is-invalid':' ';?>" placeholder="numero de documento" id="nombre" name="num_documento" value = "<?php echo set_value("num_documento");?>">
+                                            <?php echo form_error("num_documento","<span class='help-block'>","</span>")?>
+                                        </div>                   
+                                        
+                                      <input type="hidden" class="form-control" name="cliente" id="cliente">
+                                      <button type="submit" class="btn btn-primary pull-left">Crear cliente</button> 
+                                          
+                                    </div>
+                                    <!-- /.card-body -->
+                                    
+                                                                           
+                                   
+                                  </form>
+
+                            </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
                             </div>
