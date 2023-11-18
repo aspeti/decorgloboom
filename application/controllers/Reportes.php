@@ -14,6 +14,7 @@ class Reportes extends CI_Controller {
         $fecha_inicio = $this->input->post("fechainicio");
         $fecha_fin = $this->input->post("fechafin");
         if($this->input->post("filtrar")){
+			$fecha_fin = date("Y-m-d 23:59:59", strtotime($fecha_fin));
 			
             $ventas = $this->Reporte_model->getAllVentasByDate($fecha_inicio, $fecha_fin);
 
@@ -42,6 +43,7 @@ class Reportes extends CI_Controller {
         $fecha_fin = $this->input->post("fin");
 
 		if(!empty($fecha_inicio)){
+			$fecha_fin = date("Y-m-d 23:59:59", strtotime($fecha_fin));
 			$data = array(
 				"ventas" => $this->Reporte_model->getAllVentasByDate($fecha_inicio, $fecha_fin),
 				'usuario' => $this->session->userdata("nombre"),	
