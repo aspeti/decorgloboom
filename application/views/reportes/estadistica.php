@@ -49,7 +49,7 @@
                   <form action="<?php echo base_url() ?>reportes/estadistica" method="POST"  target="_blank" >
                       <div class=" form-group  row">  
                         <div class ="col-md-2">
-                        <input type="submit" class="btn btn-block btn-success" name="estadistica" id="estadistica" value="Exportar">  
+                        <input type="submit" class="btn btn-block btn-success" name="estadistica" id="estadistica" value="Generar">  
                         </div>                     
                           
                       </div> 

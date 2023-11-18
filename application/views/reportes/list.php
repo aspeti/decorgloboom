@@ -71,7 +71,7 @@
                           <input type="hidden" class="form-control" name="inicio" id="inicio" value="<?php echo !empty($fecha_inicio)? $fecha_inicio:'';?>"/>
                           <input type="hidden" class="form-control" name="fin" id="fin" value="<?php echo !empty($fecha_fin)? $fecha_fin:'';?>"/>
                           <div class ="col-md-2">
-                            <input type="submit" class="btn btn-block btn-success" name="filtrar" id=filtrar value="Exportar">    
+                            <input type="submit" class="btn btn-block btn-success" name="filtrar" id=filtrar value="Generar">    
                           </div>
                                                
                         </div> 

@@ -26,7 +26,7 @@
               <div class="card-header">                
                 <div class ="col-md-2" >
                   <a href="<?php echo base_url();?>categorias/add" type="button" class="btn btn-block btn-success"> <!-- quietar el btn-block---->
-                    <span class="fa fa-plus"></span>  Agregar
+                    <span class=""></span>  Añadir
                   </a>
                 </div>
               </div>
@@ -51,12 +51,12 @@
                     <td><?php echo $categoria->descripcion;?></td>
                     <td>
                         <div class="btn-group">
-                          <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $viewURL ='categorias/view/'.$categoria->id_categoria;?>">
+                          <button type="button" class="btn btn-secondary btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $viewURL ='categorias/view/'.$categoria->id_categoria;?>">
                             <span class="fa fa-search"></span>
                           </button>
                           <!--a class="btn btn-primary" href="#" class="btn bt-info"><span class="fa fa-eye"></span></!a-->
-                          <a class="btn btn-warning" href="<?php echo base_url();?>categorias/edit/<?php echo $categoria->id_categoria;?>" class="btn btn-info"><span class="fa fa-pen"></span></a>
-                          <a class="btn btn-danger btn-remove" href="<?php echo base_url();?>categorias/delete/<?php echo $categoria->id_categoria;?>" class="btn btn-info"><i class="fa fa-trash"></i></a>
+                          <a class="btn btn-info" href="<?php echo base_url();?>categorias/edit/<?php echo $categoria->id_categoria;?>" class="btn btn-info"><span class="fa fa-pen"></span></a>
+                          <a class="btn btn-warning btn-remove" href="<?php echo base_url();?>categorias/delete/<?php echo $categoria->id_categoria;?>" class="btn btn-info"><i class="fa fa-trash"></i></a>
                         </div>
                     </td>  
                   </tr>  

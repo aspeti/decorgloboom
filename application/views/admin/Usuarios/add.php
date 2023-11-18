@@ -52,7 +52,7 @@
                             <?php echo form_error("nombre","<span class='help-block'>","</span>")?>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="apellido">apellido</label>
+                        <label for="apellido">Apellido *</label>
                         <input type="text" class="form-control <?php echo !empty(form_error("nombre")) ? 'is-invalid':' ';?>"
                               placeholder="Apellido" name="apellido" id="apellido" value = "<?php echo set_value("apellido");?>">
                               <?php echo form_error("apellido","<span class='help-block'>","</span>")?>

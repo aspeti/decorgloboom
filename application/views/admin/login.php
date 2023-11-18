@@ -32,7 +32,7 @@
 		   	<?php endif; ?> 
 				<form class="login100-form validate-form" action="<?php echo base_url();?>Auth/login" method="post">
 					<span class="login100-form-title">
-						Member Login
+						BIENVENIDO
 					</span>
 
 					<div class="wrap-input100 validate-input">
@@ -53,7 +53,7 @@
 					
 					<div class="container-login100-form-btn">
 						<button type="submit" class="login100-form-btn">
-							Login
+							ingresar
 						</button>
 					</div>
         </form>

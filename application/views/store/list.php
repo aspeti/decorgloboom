@@ -27,14 +27,14 @@
               <div class="card-header">                
                 <div class ="col-md-2" >
                   <a href="<?php echo base_url();?>ventas/add" type="button" class="btn btn-block btn-success"> <!-- quietar el btn-block---->
-                    <span class="fa fa-plus"></span>  Agregar Venta
+                    <span class=""></span>  Añadir
                   </a>
                 </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">           
 
-                <table id="lista" class="table table-info table-striped">
+                <table id="lista" class="table table-info  table-striped">
                   <thead class="bg-primary">                 
                   <tr>
                     <th>#</th>
@@ -57,11 +57,8 @@
                                   <td><?php echo $venta->total;?></td>                                 
                                   
                                   <td>
-                                      <div class="btn-group">
-                                        <button type="button" class="btn btn-info btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $viewURL ='productos/view/'.$venta->id_venta;?>">
-                                          <span class="fa fa-search"></span>
-                                        </button>   
-                                        <a class="btn btn-warning" href="<?php echo base_url();?>reportes/comprobante/<?php echo $venta->id_venta;?>" class="btn btn-info" target="_blank"><span class="fas fa-file-text" ></span></a>   
+                                      <div class="btn-group">                                         
+                                        <a class="btn btn-outline-dark btn-block" href="<?php echo base_url();?>reportes/comprobante/<?php echo $venta->id_venta;?>" class="btn btn-info" target="_blank"><span class="fas fa-file-text" ></span></a>   
                                       </div>
                                   </td>  
                                 </tr>  
