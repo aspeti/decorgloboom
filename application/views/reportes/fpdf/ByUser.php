@@ -16,6 +16,8 @@ class PDF extends FPDF
       $this->Image('application/views/reportes/fpdf/logo.png', 60, 10, 10);
       $this->Image('application/views/reportes/fpdf/logo.png', 210, 10  , 10);
       
+      
+      
       $this->Cell(70);  // mover a la derecha
       $this->SetFont('Arial', 'B', 15);
       $this->Cell(80, 10, utf8_decode("TIENDA DE COTILLONES NACIONALES S.A"), 0, 0, '', 0);
@@ -34,15 +36,6 @@ class PDF extends FPDF
       $this->Cell(85, 10, utf8_decode("Direccion: Avenida San Martin Esquina Heroinas"), 0, 0, '', 0);
       $this->Ln(30);
 
-      /* TITULO DE LA TABLA */
-      //color
-      /*
-      $this->SetTextColor(0, 0, 0);
-      $this->Cell(50); // mover a la derecha
-      $this->SetFont('Arial', 'B', 15);
-      $this->Cell(100, 10, utf8_decode("REPORTE GENERAL DE VENTAS"), 0, 1, 'C', 0);
-      $this->Ln(7);
-      */
 
       /* CAMPOS DE LA TABLA */
       //color
@@ -51,16 +44,9 @@ class PDF extends FPDF
       $this->SetTextColor(255, 255, 255); //colorTexto
       $this->SetDrawColor(163, 163, 163); //colorBorde
       $this->SetFont('Arial', 'B', 11);
-      /*
-      $this->Cell(18, 10, utf8_decode('N°'), 1, 0, 'C', 1);
-      $this->Cell(20, 10, utf8_decode('NÚMERO'), 1, 0, 'C', 1);
-      $this->Cell(30, 10, utf8_decode('TIPO'), 1, 0, 'C', 1);
-      $this->Cell(25, 10, utf8_decode('PRECIO'), 1, 0, 'C', 1);
-      $this->Cell(70, 10, utf8_decode('CARACTERÍSTICAS'), 1, 0, 'C', 1);
-      $this->Cell(25, 10, utf8_decode('ESTADO'), 1, 1, 'C', 1);*/
 
       $this->Cell(10, 10, utf8_decode('N°'), 1, 0, 'C', 1);
-      $this->Cell(80, 10, utf8_decode('Nombre '), 1, 0, 'C', 1);
+      $this->Cell(80, 10, utf8_decode('Nombre Cliente'), 1, 0, 'C', 1);
       $this->Cell(60, 10, utf8_decode('Fecha de venta'), 1, 0, 'C', 1);
       $this->Cell(60, 10, utf8_decode('serie'), 1, 0, 'C', 1);
       $this->Cell(60, 10, utf8_decode('Total'), 1, 1, 'C', 1);
@@ -94,7 +80,7 @@ $pdf->AliasNbPages(); //muestra la pagina / y total de paginas
 $pdf->SetY(33);
 $pdf->Cell(10);  // mover a la derecha
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(96, 10, utf8_decode("Usuario : " .$usuario), 0, 0, '', 0);
+$pdf->Cell(96, 10, utf8_decode("Usuario : " .$usuario->nombre.' '.$usuario->apellido), 0, 0, '', 0);
 $pdf->Ln(5);
 /*
 $hoy = date('d/m/Y');
@@ -103,15 +89,15 @@ $this->Cell(355, 10, utf8_decode($hoy), 0, 0, 'C'); // pie de pagina(fecha de pa
 /* TELEFONO */
 $pdf->Cell(10);  // mover a la derecha
 $pdf->SetFont('Arial', 'B', 10);
+$pdf->Cell(96, 10, utf8_decode("Correo : " .$usuario->email), 0, 0, '', 0);
 $hoy = date('d/m/Y');
-$pdf->Cell(59, 10, utf8_decode("Fecha Inicial : ".$fechaInicio), 0, 0, '', 0);
 $pdf->Ln(5);
 
 
 /* COREEO */
 $pdf->Cell(10);  // mover a la derecha
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->Cell(85, 10, utf8_decode("Fecha Final : ".$fechaFinal), 0, 0, '', 0);
+$pdf->Cell(96, 10, utf8_decode("Dirreccion : " .$usuario->direccion), 0, 0, '', 0);
 $pdf->Ln(25);
 
 

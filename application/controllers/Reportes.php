@@ -6,6 +6,7 @@ class Reportes extends CI_Controller {
 	public function __construct(){
         parent::__construct();
         $this->load->model('Reporte_model'); 
+		$this->load->model('Usuario_model');
     }
 
     public function index()
@@ -88,6 +89,18 @@ class Reportes extends CI_Controller {
 		);	
 
 		$this->load->view('reportes/fpdf/recibo',  $data);
+
+	}
+
+	public function reporteByUser($id)
+	{	
+				
+		$data = array(
+			"ventas" => $this->Reporte_model->getAllVentaByUser($id),
+			'usuario' => $this ->Usuario_model->getUsuarioById($id),
+		);	
+
+		$this->load->view('reportes/fpdf/ByUser',  $data);
 
 	}
 

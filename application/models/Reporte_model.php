@@ -65,5 +65,16 @@ class Reporte_model extends CI_Model {
         return $resultados->result();
     }
 
+    public function getAllVentaByUser($id){          
+        $this->db->select("v.*, c.nombre as cliente");
+        $this->db->from("ventas v");
+        $this->db->join("cliente c", "c.id_cliente = v.id_cliente");  
+        $this->db->join("usuario u", "u.id_usuario = v.id_usuario");    
+        $this->db->where("v.eliminado","0");
+        $this->db->where('u.id_usuario =', $id);
+        $resultados = $this->db->get();
+        return $resultados->result();   
+    }
+
 
 }

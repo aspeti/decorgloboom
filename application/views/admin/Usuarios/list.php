@@ -57,7 +57,9 @@
                     <td><?php echo $usuario->celular;?></td>
                     
                     <td>
-                        <div class="btn-group">                          
+                        <div class="btn-group">  
+                        <a class="btn btn-outline-dark btn-block" href="<?php echo base_url();?>reportes/reporteByUser/<?php echo $usuario->id_usuario;?>" class="btn btn-info" target="_blank"><span class="fas fa-file-text" ></span></a>
+                                                  
                           <button type="button" class="btn btn-secondary btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $viewURL ='usuarios/view/'.$usuario->id_usuario;?>">
                             <span class="fa fa-search"></span>
                           </button>
