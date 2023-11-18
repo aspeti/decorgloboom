@@ -33,7 +33,7 @@ class Categorias extends CI_Controller {
 		$descripcion = $this->input->post("descripcion");
 
 		// campo a validar, alias del campo, regla de validacion is unique( tabla,. nombre campo)	
-		$this->form_validation->set_rules("nombre", "Nombre", "required|alpha|min_length[3]|max_length[20]|is_unique[categoria.nombre]");
+		$this->form_validation->set_rules("nombre", "Nombre", "required|regex_match[/^[a-zA-Z ]+$/]|min_length[3]|max_length[20]|is_unique[categoria.nombre]");
 
 		if($this->form_validation->run()){
 
@@ -89,7 +89,7 @@ class Categorias extends CI_Controller {
 			$unique = '|is_unique[categoria.nombre]';
 		}
 
-		$this->form_validation->set_rules("nombre", "Nombre",  "required|alpha|min_length[3]|max_length[20]".$unique);
+		$this->form_validation->set_rules("nombre", "Nombre",  "required|regex_match[/^[a-zA-Z ]+$/]|min_length[3]|max_length[20]".$unique);
 
 		if($this->form_validation->run()){
 

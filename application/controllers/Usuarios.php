@@ -43,8 +43,8 @@ class Usuarios extends CI_Controller {
 		$password = $primerCaracter.$celular;
 
 			//echo ($nombre.'-'.$apellido.'-'.$ci.'-'.$direccion.'-'.$celular.'-'.$email.'-'.$id_rol.'*'.md5($password));
-		$this->form_validation->set_rules("nombre", "Nombre", "required|alpha|min_length[3]|max_length[20]");
-		$this->form_validation->set_rules("apellido", "Apellido", "required|alpha|min_length[3]|max_length[20]");
+		$this->form_validation->set_rules("nombre", "Nombre", "required|regex_match[/^[a-zA-Z ]+$/]|min_length[3]|max_length[20]");
+		$this->form_validation->set_rules("apellido", "Apellido", "required|regex_match[/^[a-zA-Z ]+$/]|min_length[3]|max_length[20]");
 		$this->form_validation->set_rules("celular", "Celular", "trim|numeric|required|min_length[8]|max_length[8]");
 		$this->form_validation->set_rules("direccion", "Direccion", "required|min_length[3]|max_length[30]");
 		$this->form_validation->set_rules("email", "Email", "required|valid_email|is_unique[usuario.email]");
@@ -116,8 +116,8 @@ class Usuarios extends CI_Controller {
 		}
 		
 		
-		$this->form_validation->set_rules("nombre", "Nombre", "required|alpha|min_length[3]|max_length[20]");
-		$this->form_validation->set_rules("apellido", "Apellido", "required|alpha|min_length[3]|max_length[20]");
+		$this->form_validation->set_rules("nombre", "Nombre", "required|regex_match[/^[a-zA-Z ]+$/]|min_length[3]|max_length[20]");
+		$this->form_validation->set_rules("apellido", "Apellido", "required|regex_match[/^[a-zA-Z ]+$/]|min_length[3]|max_length[20]");
 		$this->form_validation->set_rules("celular", "Celular", "trim|numeric|required|min_length[8]|max_length[8]");
 		$this->form_validation->set_rules("direccion", "Direccion", "required|min_length[3]|max_length[30]");
 		$this->form_validation->set_rules("email", "Email", "required|valid_email|min_length[5]|max_length[20]".$unique);

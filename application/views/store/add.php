@@ -69,19 +69,19 @@
                                             </div>
                                             <div class="form-group row">
                                                 <div class="col-md-4">
-                                                    <label for="">Cliente:</label>
+                                                    <label for="">.</label>
                                                     <div class="input-group">
                                                         <input type="hidden" name="idcliente" id="idcliente">
                                                         <input type="text" class="form-control" disabled="disabled" id="cliente">
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-default" ><span class="fa fa-search"></span> Buscar</button>
+                                                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal-default" ><span class="fa fa-search"></span> Cliente</button>
                                                         </span>
                                                     </div><!-- /input-group -->
                                                 </div> 
                                                 <div class="col-md-4">
-                                                        <label for="producto">Productos</label>
+                                                        <label for="producto">.</label>
                                                         <select  class="form-control select2bs4" name="producto" id="producto" style="width: 100%;">
-                                                        <option value="selected">Seleccione...</option> 
+                                                        <option value="selected">Seleccionar Productos</option> 
                                                             <?php foreach($productos as $producto): ?>
                                                                 
                                                             <?php $dataProducto = $producto->id_producto.'*'.$producto->codigo.'*'.$producto->nombre.'*'.$producto->precio.'*'.$producto->stock;?>
@@ -94,7 +94,7 @@
                                                 
                                                     <div class="col-md-12">
                                                     <label for="">&nbsp;</label>
-                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-block"><span class="fa fa-plus"></span> Agregar Producto</button>
+                                                    <button id="btn-agregar" type="button" class="btn btn-success btn-block"><span class="fa fa-plus"></span> Agregar </button>
                                                     </div>
                                                 </div>
 
