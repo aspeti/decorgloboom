@@ -58,9 +58,9 @@
         
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="example1" class="table table-info table-striped">
                   <thead>
-                  <tr>
+                  <tr class="bg-primary">
                     <th>#</th>               
                     <th>Producto</th>
                     <th>Cantidad</th>
@@ -84,10 +84,10 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>#</th>               
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Total Bs </th>                                
+                    <th>.</th>               
+                    <th>.</th>
+                    <th>.</th>
+                    <th>. </th>                                
                   </tr>
                   </tfoot>
                 </table>

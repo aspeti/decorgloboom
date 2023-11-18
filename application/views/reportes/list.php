@@ -81,15 +81,15 @@
         
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="example1" class="table table-info table-striped">
                   <thead>
-                  <tr>
+                  <tr class="bg-primary">
                     <th>#</th>
                     <th>Cliente</th>
                     <th>num de recibo</th>
                     <th>Fecha de Venta</th>
                     <th>Total</th>
-                    <th>Acciones</th>
+                    <th></th>
                   </tr>
                   </thead>
                   <tbody>
@@ -116,12 +116,12 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>#</th>
-                    <th>Cliente</th>
-                    <th>num de recibo</th>
-                    <th>Fecha de Venta</th>
-                    <th>Total</th>
-                    <th>Acciones</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
                   </tr>
                   </tfoot>
                 </table>

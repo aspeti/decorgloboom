@@ -34,8 +34,8 @@
               <!-- /.card-header -->
               <div class="card-body">           
 
-                <table id="lista" class="table table-bordered table-striped">
-                  <thead>                 
+                <table id="lista" class="table table-info table-striped">
+                  <thead class="bg-primary">                 
                   <tr>
                     <th>#</th>
                     <th>Fecha</th>
@@ -71,12 +71,12 @@
                   </tbody>                                 
                  
                   <tr>
-                  <th>#</th>
-                    <th>Producto</th>
+                  <th>.</th>
+                    <th>.</th>
                     <th>Categoria</th>
-                    <th>cliente</th>
-                    <th>Precio</th>
-                    <th>Total</th>  
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>  
                   </tr>
 
                 </table>

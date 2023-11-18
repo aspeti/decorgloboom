@@ -34,9 +34,9 @@
               <!-- /.card-header -->
               <div class="card-body">           
 
-                <table id="lista" class="table table-bordered table-striped">
+                <table id="lista" class="table table-info table-striped">
                   <thead>                 
-                  <tr>
+                  <tr class="bg-primary">
                     <th>#</th>
                     <th>Codigo</th>
                     <th>Nombre</th>
@@ -78,15 +78,15 @@
                   </tbody>                                 
                  
                   <tr>
-                    <th>#</th>
-                    <th>Codigo</th>                    
-                    <th>Nombre</th>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                    <th>Stock</th>
-                    <th>img</th>
-                    <th>Categoria</th>
-                    <th>Acciones</th>
+                    <th>.</th>
+                    <th>.</th>                    
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
                   </tr>
 
                 </table>

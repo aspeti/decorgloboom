@@ -33,9 +33,9 @@
               <!-- /.card-header -->
               <div class="card-body">           
 
-                <table id="lista" class="table table-bordered table-striped">
+                <table id="lista" class="table table-info table-striped">
                   <thead>                 
-                  <tr>
+                  <tr class="bg-primary">
                     <th>#</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
@@ -72,13 +72,13 @@
                   </tbody>                                 
                  
                   <tr>
-                    <th>#</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>CI</th>
-                    <th>email</th>
-                    <th>Celular</th>
-                    <th>Acciones</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
+                    <th>.</th>
                   </tr>
 
                 </table>
