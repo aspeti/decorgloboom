@@ -54,15 +54,16 @@ class Productos extends CI_Controller {
 		$config['overwrite'] = TRUE;
 
 		$this->load->library('upload', $config);
-
+		$imgPath='';
 		
 		if ($this->upload->do_upload('customFile')) {
 			// Archivo subido exitosamente
 			$file_info = $this->upload->data();			
 			$file_type = $file_info['file_ext'];
+			$imgPath = $imgPath.'/assets/img/productos/'.$idProductoImg.$file_type;
 		}		
 
-		$imgPath = '/assets/img/productos/'.$idProductoImg.$file_type;
+		
 
         //echo ($nombre.'-'.$apellido.'-'.$ci.'-'.$direccion.'-'.$celular.'-'.$email.'-'.$id_rol.'*'.md5($password));
 
@@ -70,6 +71,7 @@ class Productos extends CI_Controller {
 		$this->form_validation->set_rules("precio", "Precio", "required|numeric");
 		$this->form_validation->set_rules("codigo", "Codigo", "required|alpha_dash|is_unique[producto.codigo]");		
 		$this->form_validation->set_rules("stock", "Stock", "trim|numeric|required|max_length[4]");
+		$this->form_validation->set_rules("customFile", "Archivo", "callback_file_check");
         
 		if($this->form_validation->run()){	
 
@@ -100,6 +102,15 @@ class Productos extends CI_Controller {
 		//	echo $nombre." ".$descripcion; //to make test	
 		
 	}
+	public function file_check($str)
+{
+    if (empty($_FILES['customFile']['name'])) {
+        $this->form_validation->set_message('file_check', 'Debes subir un archivo.');
+        return false;
+    } else {
+        return true;
+    }
+}
 
 	public function edit($id){	
 

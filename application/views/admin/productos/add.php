@@ -97,10 +97,12 @@
                   <div class="form-group">
                     <label for="customFile">Subir Imagen</label>
                     <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile" name="customFile">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input <?php echo !empty(form_error('customFile')) ? 'is-invalid' : ''; ?>" id="customFile" name="customFile">
                         <label class="custom-file-label" for="customFile">Seleccionar Archivo</label>
-                      </div>                     
+                        <?php echo form_error('customFile', '<div class="invalid-feedback">', '</div>'); ?>
+                    </div>
+                     
                     </div>
                   </div>
                   
