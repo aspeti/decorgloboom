@@ -244,3 +244,11 @@ DEFAULT CHARACTER SET = utf8;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+USE `decorgloboom_db`;
+
+DROP TABLE IF EXISTS `tipo_documento`;
+DROP TABLE IF EXISTS `tipo_cliente`;
+
+ALTER TABLE `cliente` DROP FOREIGN KEY `fk_Cliente_tipo_cliente1`;
+ALTER TABLE `cliente` DROP FOREIGN KEY `fk_Cliente_tipo_documento1`;

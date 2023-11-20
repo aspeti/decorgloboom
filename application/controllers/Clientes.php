@@ -47,8 +47,6 @@ class Clientes extends CI_Controller {
 				'eliminado' =>"0",
 				'fecha_creacion' => date('Y-m-d H:i:s'),
 			    'fecha_actualizacion' => date('Y-m-d H:i:s'),
-				'id_tipo_cliente'=>"1",
-				'id_tipo_documento'=>"1",
 			);
 	
 			if($this->Cliente_model->save($newClient)){
