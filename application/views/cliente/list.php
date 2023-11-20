@@ -58,9 +58,11 @@
                     <td><?php echo $cliente->id_tipo_cliente;?></td>                    
                     <td>
                         <div class="btn-group">
+                        <a class="btn btn-outline-dark btn-block" href="<?php echo base_url();?>reportes/reporteByClient/<?php echo $cliente->id_cliente;?>" class="btn btn-info" target="_blank"><span class="fas fa-file-text" ></span></a>
                           <button type="button" class="btn btn-secondary btn-view" data-toggle="modal" data-target="#modal-default" value="<?php echo $viewURL ='clientes/view/'.$cliente->id_cliente;?>">
                             <span class="fa fa-search"></span>
                           </button>
+                          
                           <!--a class="btn btn-primary" href="#" class="btn bt-info"><span class="fa fa-eye"></span></!a-->
                           <a class="btn btn-info" href="<?php echo base_url();?>clientes/edit/<?php echo $cliente->id_cliente;?>" class="btn btn-info"><span class="fa fa-pen"></span></a>
                           <a class="btn btn-warning btn-remove" href="<?php echo base_url();?>clientes/delete/<?php echo $cliente->id_cliente;?>" class="btn btn-info"><i class="fa fa-trash"></i></a>

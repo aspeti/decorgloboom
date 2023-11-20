@@ -75,6 +75,18 @@ class Reporte_model extends CI_Model {
         $resultados = $this->db->get();
         return $resultados->result();   
     }
+    public function getAllVentaByClient($id){          
+        $this->db->select('p.nombre as nombre, SUM(d.cantidad) as cantidad, SUM(d.importe) as precioT, p.precio as precioU');
+        $this->db->from('producto p');
+        $this->db->join('detalle d', 'p.id_producto = d.id_producto');
+        $this->db->join('ventas v', 'd.id_venta = v.id_venta');
+        $this->db->join('cliente c', 'v.id_cliente = c.id_cliente');
+        $this->db->where('c.id_cliente', $id);
+        $this->db->group_by('p.id_producto, p.nombre');
+    
+        $query = $this->db->get();
+        return $query->result();  
+    }
 
 
 }
