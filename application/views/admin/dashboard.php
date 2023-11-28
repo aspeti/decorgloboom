@@ -26,14 +26,14 @@
         <div class="card-body">
           <div class="row">
             <div class="col-12 col-sm-6">
-              <h3 class="d-inline-block d-sm-none">DECORGLOBOOM</h3>
+              <h3 class="d-inline-block d-sm-none navar-red">DECORGLOBOOM</h3>
               <div class="col-12">
                 <img src="<?php echo base_url()."assets\img\imgGlobos.jpg" ;?>" class="product-image" alt="Product Image">
               </div>
             </div>
             
             <div class="col-12 col-sm-6">
-              <h3 class="my-3" style="color: blue";>DECORGLOBOOM</h3>
+              <h3 class="my-3" style="color: red";>DECORGLOBOOM</h3>
               <p>DECORGLOBOOM, desde su establecimiento en 2015, ha sido pionera en la industria de suministros para decoraciones, 
                 brindando una gama exquisita de productos y accesorios especialmente diseñados para transformar cualquier evento 
                 en una experiencia memorable y llena de alegría. Con una pasión inquebrantable por la creatividad y la calidad, 

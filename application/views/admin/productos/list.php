@@ -27,7 +27,7 @@
               <div class="card-header">                
                 <div class ="col-md-2" >
                   <a href="<?php echo base_url();?>productos/add" type="button" class="btn btn-block btn-success"> <!-- quietar el btn-block---->
-                    <span class=""></span>  Añadir
+                    <span class=""></span>  Crear
                   </a>
                 </div>
               </div>

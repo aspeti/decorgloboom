@@ -8,12 +8,22 @@ class Auth extends CI_Controller {
         $this->load->model('Usuario_model');
     }
 
-	public function index()
+	public function inde()
 	{
         if($this->session->userdata("login")){
             redirect(base_url()."dashboard");
         }else{
             $this->load->view("admin/login");
+        }      
+        	
+	}
+
+	public function index()
+	{
+        if($this->session->userdata("index")){
+            redirect(base_url()."dashboard");
+        }else{
+            $this->load->view("admin/index");
         }      
         	
 	}

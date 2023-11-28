@@ -14,6 +14,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/dist/css/main.css">
   <!-- bootstrap style -->
+  
 
 
 </head>
@@ -22,7 +23,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="assets\img\loginGlobos.jpg" alt="IMG">
+					<img src="<?php echo base_url()."assets\img\loginGlobos.jpg" ;?>" class="product-image" alt="Product Image">
 				</div>
 
         <?php if($this->session->flashdata("error")):?>
